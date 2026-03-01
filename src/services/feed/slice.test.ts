@@ -1,17 +1,9 @@
-import { feedReducer } from './slice';
+import { feedReducer, initialState } from './slice';
 import { getFeedsThunk } from './actions';
 
 describe('tests for feedSlice', () => {
   it('Возвращает initial state при неизвестном action', () => {
     const state = feedReducer(undefined, { type: 'UNKNOWN_ACTION' });
-
-    const initialState = {
-      orders: [],
-      total: 0,
-      totalToday: 0,
-      isLoading: false,
-      error: null
-    };
 
     expect(state).toEqual(initialState);
   });

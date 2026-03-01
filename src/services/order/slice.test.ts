@@ -1,4 +1,4 @@
-import { orderReducer, clearOrder } from './slice';
+import { orderReducer, clearOrder, initialState } from './slice';
 import { postOrderThunk } from './actions';
 
 const testOrder = {
@@ -14,12 +14,6 @@ const testOrder = {
 describe('tests for orderSlice', () => {
   it('Возвращает initial state при неизвестном action', () => {
     const state = orderReducer(undefined, { type: 'UNKNOWN_ACTION' });
-
-    const initialState = {
-      orderModalData: null,
-      orderRequest: false,
-      error: null
-    };
 
     expect(state).toEqual(initialState);
   });

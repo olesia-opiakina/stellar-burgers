@@ -1,9 +1,9 @@
 describe('Конструктор', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://norma.education-services.ru/api/ingredients', {
+    cy.intercept('GET', 'api/ingredients', {
       fixture: 'ingredients.json'
     });
-    cy.visit('http://localhost:4000/');
+    cy.visit('/');
   });
 
   it('Добавление ингредиентов', () => {
@@ -72,17 +72,17 @@ describe('Конструктор', () => {
 
 describe('Создание заказа', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://norma.education-services.ru/api/ingredients', {
+    cy.intercept('GET', 'api/ingredients', {
       fixture: 'ingredients.json'
     }).as('getIngredients');
-    cy.intercept('GET', 'https://norma.education-services.ru/api/auth/user', {
+    cy.intercept('GET', 'api/auth/user', {
       fixture: 'user.json'
     }).as('getUser');
-    cy.intercept('POST', 'https://norma.education-services.ru/api/orders', {
+    cy.intercept('POST', 'api/orders', {
       fixture: 'orders.json'
     }).as('createOrder');
     cy.setCookie('accessToken', 'Bearer test-access-token');
-    cy.visit('http://localhost:4000/', {
+    cy.visit('/', {
       onBeforeLoad(win) {
         win.localStorage.setItem('refreshToken', 'test-refresh-token');
       }

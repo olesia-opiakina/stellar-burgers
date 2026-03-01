@@ -1,4 +1,4 @@
-import { ingredientsReducer } from './slice';
+import { ingredientsReducer, initialState } from './slice';
 import { getIngredientsThunk } from './actions';
 import { TIngredient } from '@utils-types';
 
@@ -6,7 +6,6 @@ describe('tests for ingredientsSlice', () => {
   it('Возвращает initial state при неизвестном action', () => {
     const state = ingredientsReducer(undefined, { type: 'UNKNOWN_ACTION' });
 
-    const initialState = { items: [], isLoading: false, error: null };
     expect(state).toEqual(initialState);
   });
 

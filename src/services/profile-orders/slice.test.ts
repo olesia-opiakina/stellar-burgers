@@ -1,16 +1,10 @@
-import { profileOrderReducer } from './slice';
+import { initialState, profileOrderReducer } from './slice';
 import { getUserOrdersThunk } from './actions';
 import type { TOrder } from '@utils-types';
 
 describe('tests for profileOrdersSlice', () => {
   it('Возвращает initial state при неизвестном action', () => {
     const state = profileOrderReducer(undefined, { type: 'UNKNOWN_ACTION' });
-
-    const initialState = {
-      orders: [],
-      isLoading: false,
-      error: null
-    };
 
     expect(state).toEqual(initialState);
   });

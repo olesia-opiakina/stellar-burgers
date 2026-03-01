@@ -4,7 +4,8 @@ import {
   addIngredient,
   removeIngredient,
   moveIngredient,
-  setBun
+  setBun,
+  initialState
 } from './slice';
 import { postOrderThunk } from '../order/actions';
 
@@ -63,8 +64,6 @@ describe('tests for burgerConstructorSlice', () => {
     const state = burgerConstructorReducer(undefined, {
       type: 'UNKNOWN_ACTION'
     });
-
-    const initialState = { constructorItems: { bun: null, ingredients: [] } };
 
     expect(state).toEqual(initialState);
   });

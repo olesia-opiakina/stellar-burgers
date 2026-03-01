@@ -1,4 +1,4 @@
-import { setIsAuthChecked, setUser, userReducer } from './slice';
+import { initialState, setIsAuthChecked, setUser, userReducer } from './slice';
 import {
   checkUserAuth,
   loginUserThunk,
@@ -37,12 +37,6 @@ describe('tests for userSlice', () => {
 
   it('Возвращает initial state при неизвестном action', () => {
     const state = userReducer(undefined, { type: 'UNKNOWN_ACTION' });
-
-    const initialState = {
-      user: null,
-      error: null,
-      isAuthChecked: false
-    };
 
     expect(state).toEqual(initialState);
   });
