@@ -1,8 +1,25 @@
-# Проектная работа 11-го спринта
+# Проект Stellar Burgers
 
 [Макет](<https://www.figma.com/file/vIywAvqfkOIRWGOkfOnReY/React-Fullstack_-Проектные-задачи-(3-месяца)_external_link?type=design&node-id=0-1&mode=design>)
 
 [Чеклист](https://www.notion.so/praktikum/0527c10b723d4873aa75686bad54b32e?pvs=4)
+
+Одностраничное веб-приложение для создания бургеров, оформления заказов и личным кабинетом. 
+Стек:
+
+## Демо
+<https://stellar-burgers-project.netlify.app/>
+
+## Стек технологий
+React, TypeScript, Redux Toolkit, React Router, HTML5, CSS Modules, Webpack, Jest, Cypress
+
+## Функциональность
+
+## Запуск проекта
+
+## Тестирование
+
+
 
 ## Этапы работы:
 
