@@ -1,4 +1,4 @@
-# Проект Stellar Burgers
+# Stellar Burgers
 
 Одностраничное веб-приложение для создания бургеров с возможностью оформления заказов, авторизации пользователей и управления личным кабинетом.
 
@@ -37,6 +37,7 @@ npm start
 ```env
 BURGER_API_URL=https://norma.education-services.ru/api
 ```
+
 ### Production-сборка
 
 ```bash
